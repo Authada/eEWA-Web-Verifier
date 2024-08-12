@@ -1,0 +1,17 @@
+@use '/src/template' as temp;
+
+:host {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    overflow-wrap: anywhere;
+
+    .body {
+        position: relative;
+        max-width: 800px;
+        width: 100%;
+        padding-bottom: 20px;
+    }
+}

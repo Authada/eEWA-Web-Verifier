@@ -1,0 +1,38 @@
+@use '/src/template' as temp;
+
+:host {
+    button {
+
+        border: 0;
+        border-radius: 18pt;
+        color: hsl(0deg 0% 99%);
+        cursor: pointer;
+        font-size: 9.3pt;
+        height: 37.3pt;
+        padding: 1rem;
+        transition: background 225ms ease-in-out 0s;
+        user-select: none;
+        width: fit-content;
+        min-width: 102pt;
+
+        &.primary {
+            background: map-get(map-get(temp.$palette, color), primary);
+        }
+
+        &.secondary {
+            background: map-get(map-get(temp.$palette, color), secondary);
+            color: #707070;
+            border: black;
+            border-width: 2px;
+            border-radius: 18pt;
+            border-style:solid;
+        }
+
+        &:disabled {
+          cursor: none;
+          background-color: map-get(map-get(temp.$palette, color), disabled);
+          pointer-events: none;
+        }
+    }
+
+}

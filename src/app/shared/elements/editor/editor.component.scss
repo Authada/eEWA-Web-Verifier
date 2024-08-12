@@ -1,0 +1,20 @@
+@use '/src/template' as temp;
+
+:host {
+    .vc-container-editor {
+        background-color: temp.$backgroundPaper;
+        border-radius: 16px;
+        width: auto;
+        min-height: inherit;
+        min-width: inherit;
+        overflow: auto auto;
+        padding: 16px;
+        position: relative;
+
+        textarea {
+            height: 100%;
+            resize: none;
+            width: 100%;
+        }
+    }
+}

@@ -1,0 +1,8 @@
+<vc-wallet-layout>
+  <div body class="container">
+    <div class="display-container body">
+      <vc-presentations-results [results]="data" *ngIf="data"></vc-presentations-results>
+    </div>
+    <vc-button class="vc-button" [name]="BACK_ONLY_ACTIONS[0].label" [id]="BACK_ONLY_ACTIONS[0].id" [mode]="BACK_ONLY_ACTIONS[0].mode" [isDisabled]="BACK_ONLY_ACTIONS[0].disabled" [color]="BACK_ONLY_ACTIONS[0].color" (clicked)="back()"></vc-button>
+  </div>
+</vc-wallet-layout>

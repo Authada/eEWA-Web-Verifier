@@ -1,0 +1,37 @@
+<div class="bg-panel mb">
+  <p>
+    <label>Format</label>
+    <mat-button-toggle-group [(ngModel)]="format">
+      <mat-button-toggle value="mso_mdoc">MSO Mdoc</mat-button-toggle>
+      <mat-button-toggle value="vc+sd-jwt">SD-JWT VC</mat-button-toggle>
+    </mat-button-toggle-group>
+  </p>
+  <p>
+    <label>Signature type</label>
+    <mat-button-toggle-group [(ngModel)]="type">
+      <mat-button-toggle value="authchan">Authenticated Channel</mat-button-toggle>
+      <mat-button-toggle value="signature">Signatur</mat-button-toggle>
+    </mat-button-toggle-group>
+  </p>
+  <div class="creation">
+    <div class="creation-header">
+      <h3>Select the information requested from the user</h3>
+      <span>{{ definitionFields.length }} selected</span>
+    </div>
+    <ng-container *ngFor="let field of fields; index as idx; trackBy: trackByFn">
+      <div class="controls" (click)="handle(field)">
+        <mat-checkbox color="primary" [checked]="isExist(field)">
+          {{ field.label }}
+        </mat-checkbox>
+      </div>
+    </ng-container>
+  </div>
+</div>
+<mat-expansion-panel class="presentation-definition bg-panel">
+  <mat-expansion-panel-header>
+    <mat-panel-title>
+      Presentation definition
+    </mat-panel-title>
+  </mat-expansion-panel-header>
+  <vc-editor [code]="definitionText"></vc-editor>
+</mat-expansion-panel>

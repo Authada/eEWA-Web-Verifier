@@ -1,0 +1,88 @@
+$palette: (
+    color: (
+        primary:#6e23d2,
+        secondary: #ffffff,
+        disabled: #AEAEFC,
+        success: #00dcb4,
+        warning: #F39626,
+        error: #ed0020,
+        info: #707070
+    ),
+    general: (
+        bg: (
+            default: #f4f4f4,
+            paper: hsl(0deg 0% 100%)
+        ),
+        text: (
+            primary: (
+                dark: #6e23d2
+            ),
+            secondary: (
+                dark: hsl(0deg 0% 44%),
+                light: hsl(0deg 0% 99%),
+            ),
+            disabled: (
+                dark: hsl(0deg 0% 60%),
+                light: hsl(0deg 0% 98%),
+            )
+        ),
+        divider: (
+            dark: hsl(0deg 0% 84%),
+        )
+    )
+);
+$spaceBasic: 1.5rem;
+$space: (
+    top: 2rem,
+    right: 2rem,
+    left: 2rem,
+    bottom: 2rem
+);
+$backgroundDefault: map-get(map-get(map-get($palette, general), bg), default);
+$backgroundPaper: map-get(map-get(map-get($palette, general), bg), paper);
+$textDarkSecondary: map-get(map-get(map-get(map-get($palette, general), text), secondary), dark);
+$textDarkPrimary: map-get(map-get(map-get(map-get($palette, general), text), primary), dark);
+$dividerDark: map-get(map-get(map-get($palette, general), divider), dark);
+$left: 31%;
+$max-body-panel: 34.375em;
+$max-body-width: 31.25rem;
+$max-body-height: 31.25rem;
+$min-body-width: 21.875rem;
+$min-body-height: 21.875rem;
+$body-height: 34.25rem;
+$body-width: 35rem;
+$body-width-xs: 18rem;
+$body-width-sm: 19rem;
+$body-width-md: 23rem;
+
+h1, h2, h3, h4, h5, h6 {
+    color: map-get(map-get(map-get(map-get($palette, general), text), primary), dark);
+    font-weight: 500;
+    margin: $spaceBasic 0;
+}
+
+h1 {
+    font-size: 6em;
+}
+
+h2 {
+    font-size: 3.75em;
+}
+
+h3 {
+    font-size: 3em;
+}
+
+h4 {
+    font-size: 1.875em;
+}
+
+h5 {
+    font-size: 1.5em;
+    text-align: center;
+    font-weight: 500;
+}
+
+h6 {
+    font-size: 1.25em;
+}

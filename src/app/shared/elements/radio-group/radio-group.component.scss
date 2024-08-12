@@ -1,0 +1,32 @@
+@use '/src/template' as temp;
+
+:host {
+    .container {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+
+        .radio-group {
+            align-items: flex-start;
+            display: flex;
+            flex-direction: column;
+            margin: 15px 0;
+        }
+
+        .radio-button {
+            margin: 5px;
+          --mdc-radio-disabled-selected-icon-color: #000;
+          --mdc-radio-disabled-unselected-icon-color: #000;
+          --mdc-radio-unselected-focus-icon-color: #212121;
+          --mdc-radio-unselected-hover-icon-color: #212121;
+          --mdc-radio-unselected-icon-color: rgb(0 0 0 / 54%);
+          --mdc-radio-unselected-pressed-icon-color: rgb(0 0 0 / 54%);
+          --mdc-radio-selected-focus-icon-color: #6e23d2;
+          --mdc-radio-selected-hover-icon-color: #6e23d2;
+          --mdc-radio-selected-icon-color: #6e23d2;
+          --mdc-radio-selected-pressed-icon-color: #6e23d2;
+          --mat-mdc-radio-ripple-color: #000;
+          --mat-mdc-radio-checked-ripple-color: #6e23d2;
+        }
+    }
+}

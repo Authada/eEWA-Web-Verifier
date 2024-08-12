@@ -1,0 +1,96 @@
+@use '/src/template' as temp;
+
+:host {
+    max-width: 40rem;
+    ::ng-deep {
+        .mat-expansion-panel {
+            padding: 0 !important;
+          border-radius: 18pt;
+        }
+
+    }
+
+    label {
+      display: inline-block;
+      width: 160px;
+    }
+    .mb {
+        margin-bottom: temp.$spaceBasic;
+    }
+
+    .mat-button-toggle-group {
+      border-radius: 18pt;
+      width: 280px;
+      justify-content: space-evenly;
+    }
+
+    .mat-button-toggle {
+      background-color: #f2f2ff;
+      border-style: none;
+      box-shadow: none;
+      width: 100%;
+    }
+    .mat-button-toggle-checked {
+      background-color: #6E23D2;
+      color: white;
+      opacity: 0.9;
+    }
+
+    .mat-mdc-checkbox {
+      --mdc-checkbox-selected-checkmark-color: #fff;
+      --mdc-checkbox-selected-focus-icon-color: #6e23d2;
+      --mdc-checkbox-selected-hover-icon-color: #6e23d2;
+      --mdc-checkbox-selected-icon-color: #6e23d2;
+      --mdc-checkbox-selected-pressed-icon-color: #6e23d2;
+      --mdc-checkbox-unselected-focus-icon-color: #212121;
+      --mdc-checkbox-unselected-hover-icon-color: #212121;
+      --mdc-checkbox-disabled-selected-icon-color: rgba(0, 0, 0, 0.38);
+      --mdc-checkbox-disabled-unselected-icon-color: rgba(0, 0, 0, 0.38);
+      --mdc-checkbox-unselected-icon-color: rgba(0, 0, 0, 0.54);
+      --mdc-checkbox-unselected-pressed-icon-color: rgba(0, 0, 0, 0.54);
+    }
+
+    .creation {
+        display: flex;
+        flex-direction: column;
+        height: temp.$body-height;
+        overflow-y: auto;
+
+        .creation-header {
+            align-items: baseline;
+            background: temp.$backgroundDefault;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            position: sticky;
+            top: 0;
+            z-index: 50;
+
+            h3 {
+                color: temp.$textDarkSecondary;
+                font-size: 16px;
+                -webkit-font-smoothing: antialiased;
+                letter-spacing: 0;
+                line-height: 20px;
+                overflow-wrap: break-word;
+                text-decoration: none;
+                word-break: break-word;
+            }
+
+            span {
+                color: temp.$textDarkSecondary;
+                padding-right: temp.$spaceBasic;
+            }
+        }
+
+        .controls {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .presentation-definition {
+            margin-top: 1rem;
+        }
+    }
+
+}

@@ -1,0 +1,65 @@
+@use '/src/template' as temp;
+
+:host {
+    .vc-verifiable-credential {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+
+        .authorize {
+          border: 0;
+          border-radius: 16px;
+          color: hsl(0, 0%, 99%);
+          cursor: pointer;
+          font-size: 16px;
+          height: 20px;
+          padding: 1rem;
+          margin: 1rem 0;
+          transition: background 225ms ease-in-out 0s;
+          -webkit-user-select: none;
+          user-select: none;
+          width: -moz-fit-content;
+          width: fit-content;
+          background: map-get(map-get(temp.$palette, color), primary);
+          text-decoration: none;
+        }
+
+        .body {
+            align-items: center;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            width: 100%;
+
+            .qr-code {
+                -webkit-box-pack: center;
+                display: flex;
+                height: fit-content;
+                justify-content: center;
+                max-height: temp.$body-height;
+                overflow-y: auto;
+                padding: temp.$spaceBasic;
+                width: 100%;
+            }
+
+            .qr-info {
+                display: flex;
+                flex-direction: column;
+                justify-content: baseline;
+
+                p {
+                    color: temp.$textDarkSecondary;
+                }
+
+                span {
+                    color: temp.$textDarkPrimary;
+                    cursor: pointer;
+                }
+
+                a {
+                    margin-top: temp.$spaceBasic;
+                }
+            }
+        }
+    }
+}

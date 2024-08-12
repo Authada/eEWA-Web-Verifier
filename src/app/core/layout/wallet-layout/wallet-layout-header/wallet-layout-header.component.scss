@@ -1,0 +1,25 @@
+@use '/src/template' as temp;
+
+:host {
+    flex-direction: row;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px;
+    border-color: map-get(map-get(map-get(temp.$palette, general), divider), dark);
+    border-style: solid;
+    border-top: none;
+    width: inherit;
+
+    img {
+        cursor: pointer;
+        height: 70px;
+        position: relative;
+    }
+    p {
+      margin-left: 20px;
+      cursor: pointer;
+      position: relative;
+      font-size: 22pt;
+    }
+}

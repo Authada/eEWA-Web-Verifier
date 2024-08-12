@@ -1,0 +1,37 @@
+/* You can add global styles to this file, and also import other style files */
+@use 'template' as temp;
+
+html {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    background: map-get(map-get(map-get(temp.$palette, general), bg), paper);
+    height: inherit;
+    overflow-x: hidden;
+    width: inherit;
+}
+
+main {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.bg-panel {
+    background-color: temp.$backgroundDefault;
+    border-radius: 18pt;
+    padding: 1.5rem;
+}
+
+* {
+    scrollbar-color: #6e23d2 #d6d6fd;
+    scrollbar-width: thin;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+}
