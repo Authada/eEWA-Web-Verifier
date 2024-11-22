@@ -4,7 +4,7 @@ import {WalletRedirectResolver} from './features/wallet-redirect/resolver/wallet
 import {PresentationDefinitionService} from './core/services/presentation-definition.service';
 import {JWTService} from './core/services/jwt.service';
 import {NavigateService} from './core/services/navigate.service';
-import {VpTokenDecodeService} from './core/services/vptoken.decode.service';
+import {CredentialDecodeService} from '@core/services/credential-decode.service';
 
 const routes: Routes = [
 	{path: '', redirectTo: 'home', pathMatch: 'full'},
@@ -30,6 +30,18 @@ const routes: Routes = [
 		loadChildren: () => import('./features/cbor/cbor.module').then(m => m.CborModule)
 	},
 	{
+		path: 'cbor_mdl',
+		loadChildren: () => import('./features/cbor/cbor.module').then(m => m.CborModule)
+	},
+	{
+		path: 'json_email',
+		loadChildren: () => import('./features/cbor/cbor.module').then(m => m.CborModule)
+	},
+	{
+		path: 'json_msisdn',
+		loadChildren: () => import('./features/cbor/cbor.module').then(m => m.CborModule)
+	},
+	{
 		path: 'json_AUTHCHAN',
 		loadChildren: () => import('./features/cbor/cbor.module').then(m => m.CborModule)
 	},
@@ -44,7 +56,7 @@ const routes: Routes = [
 	{
 		path: 'get-wallet-code',
 		loadComponent: () => import('./features/wallet-redirect/wallet-redirect.component').then(c => c.WalletRedirectComponent),
-		providers: [PresentationDefinitionService, VpTokenDecodeService, JWTService, NavigateService],
+		providers: [PresentationDefinitionService, CredentialDecodeService, JWTService, NavigateService],
 		resolve: {
 			data: WalletRedirectResolver
 		}

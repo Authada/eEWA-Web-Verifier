@@ -9,16 +9,16 @@ import * as constants from '@core/constants/constants';
 import { PresentationDefinitionResponse } from '@app/core/models/presentation-definition-response';
 import { JWTService } from '@app/core/services/jwt.service';
 import {PresentationsResponse} from '@core/models/presentations-response';
-import {VpTokenDecodeService} from '@core/services/vptoken.decode.service';
+import {CredentialDecodeService} from '@core/services/credential-decode.service';
 
-export const WalletRedirectResolver: ResolveFn<{vpToken: KeyValue<string, string>[], idToken: KeyValue<string, string>[]}> =
+export const WalletRedirectResolver: ResolveFn<{credentials: KeyValue<string, string>[][], idToken: KeyValue<string, string>[]}> =
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
     (route: ActivatedRouteSnapshot, _state: RouterStateSnapshot):
-    Observable<{vpToken: KeyValue<string, string>[], idToken: KeyValue<string, string>[]}> => {
+    Observable<{credentials: KeyValue<string, string>[][], idToken: KeyValue<string, string>[]}> => {
     	const services = {
     		definition: inject(PresentationDefinitionService),
     		localStorage: inject(LocalStorageService),
-    		vpTokenDecode: inject(VpTokenDecodeService),
+    		credentialDecodeService: inject(CredentialDecodeService),
     		jWT: inject(JWTService),
     	};
 
@@ -30,9 +30,11 @@ export const WalletRedirectResolver: ResolveFn<{vpToken: KeyValue<string, string
     		return services.definition.getWalletResponseWithCode(data.presentation_id, responseCode)
     			.pipe(
     				switchMap((res: PresentationsResponse) => {
-    					const format = res?.presentation_submission?.descriptor_map[0]?.format;
+    					const credentials: Observable<KeyValue<string, string>[]>[] = res.credentials ? [...res.credentials.map((it) => {
+    						return services.credentialDecodeService.decode(it.format, it.credential);
+    					})] : [];
     					return forkJoin({
-    						vpToken: res.vp_token ? services.vpTokenDecode.decodeVpToken(format, res.vp_token) : of([]),
+    						credentials: forkJoin(credentials),
     						idToken: res.id_token ? services.jWT.decode(res.id_token) : of([]),
     					}).pipe(
     						take(1)

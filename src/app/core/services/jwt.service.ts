@@ -1,7 +1,7 @@
-import { Injectable } from '@angular/core';
-import { Observable, of } from 'rxjs';
+import {Injectable} from '@angular/core';
+import {Observable, of} from 'rxjs';
 import jwtDecode from 'jwt-decode';
-import { KeyValue } from '@angular/common';
+import {KeyValue} from '@angular/common';
 
 @Injectable()
 export class JWTService {

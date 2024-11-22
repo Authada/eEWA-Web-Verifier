@@ -14,7 +14,7 @@ declare let QRCode: any;
 })
 export class TestQrComponent implements OnInit {
 
-	testURL = 'http://localhost:4200/?client_id=Verifier&request_uri=eudi-openid4vp://eudi.netcompany-intrasoft.com/wallet/request.jwt/CUkGxi8NhQMwL1hPPZI0wdxj0x7c2Qi_zeOnrZoa5JO824VxZAaqZmdy2HreI5lPINr6cp4BnkdXPVD7D7ot_w';
+	testURL = 'http://localhost:4200/?client_id=Verifier&request_uri=openid4vp://eudi.netcompany-intrasoft.com/wallet/request.jwt/CUkGxi8NhQMwL1hPPZI0wdxj0x7c2Qi_zeOnrZoa5JO824VxZAaqZmdy2HreI5lPINr6cp4BnkdXPVD7D7ot_w';
 	testURL1 = 'http://localhost:4200?client_id=Verifier&request_uri=http%3A%2F%2Flocalhost%3A8080%2Fwallet%2Frequest.jwt%2F3WrKzPt1gWJwVAmWaMECW5Mrse5RaHGi50Y7PeLhzZhbJIr6JJFO84i27B0CIFLZkxB8ELVI0IUt1YecnOs19g';
 	ngOnInit (): void {
   	this.setUpQrCode1(this.testURL1);

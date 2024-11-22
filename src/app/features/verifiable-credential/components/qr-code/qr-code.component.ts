@@ -12,7 +12,7 @@ import {CommonModule, KeyValue} from '@angular/common';
 import {SharedModule} from '@app/shared/shared.module';
 import {DataService} from '@app/core/services/data.service';
 import {PresentationDefinitionService} from '@app/core/services/presentation-definition.service';
-import {forkJoin, from, interval, of, ReplaySubject, Subject, take, takeUntil} from 'rxjs';
+import {forkJoin, from, interval, Observable, of, ReplaySubject, Subject, take, takeUntil} from 'rxjs';
 import {map, switchMap} from 'rxjs/operators';
 import {NavigateService} from '@app/core/services/navigate.service';
 import {PresentationDefinitionResponse} from '@app/core/models/presentation-definition-response';
@@ -24,7 +24,7 @@ import {DeviceDetectorService} from '@app/core/services/device-detector.service'
 import {LocalStorageService} from '@app/core/services/local-storage.service';
 import * as constants from '@core/constants/constants';
 import {PresentationsResponse} from '@core/models/presentations-response';
-import {VpTokenDecodeService} from '@core/services/vptoken.decode.service';
+import {CredentialDecodeService} from '@core/services/credential-decode.service';
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 declare let QRCode: any;
@@ -35,7 +35,7 @@ declare let QRCode: any;
 	imports: [CommonModule, SharedModule, PresentationsResultsComponent],
 	templateUrl: './qr-code.component.html',
 	styleUrls: ['./qr-code.component.scss'],
-	providers: [PresentationDefinitionService, JWTService, VpTokenDecodeService],
+	providers: [PresentationDefinitionService, JWTService, CredentialDecodeService],
 	changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class QrCodeComponent implements OnInit, OnDestroy {
@@ -47,7 +47,7 @@ export class QrCodeComponent implements OnInit, OnDestroy {
   isDesktop = true;
 
   results: TransformedResponse = {
-  	vpToken: [],
+  	credentials: [],
   	idToken: []
   };
   displayButtonJWTObject = false;
@@ -57,7 +57,7 @@ export class QrCodeComponent implements OnInit, OnDestroy {
   scheme!: string;
   private readonly deviceDetectorService!: DeviceDetectorService;
   private readonly jWTService!: JWTService;
-  private readonly vpTokenDecodeService!: VpTokenDecodeService;
+  private readonly credentialDecodeService!: CredentialDecodeService;
   private readonly localStorageService!: LocalStorageService;
   constructor (
     private readonly presentationDefinitionService: PresentationDefinitionService,
@@ -68,7 +68,7 @@ export class QrCodeComponent implements OnInit, OnDestroy {
   ) {
   	this.deviceDetectorService = this.injector.get(DeviceDetectorService);
   	this.jWTService = this.injector.get(JWTService);
-  	this.vpTokenDecodeService = this.injector.get(VpTokenDecodeService);
+  	this.credentialDecodeService = this.injector.get(CredentialDecodeService);
   	this.localStorageService = this.injector.get(LocalStorageService);
   	this.isDesktop = this.deviceDetectorService.isDesktop();
   	if (this.localStorageService.get(constants.SCHEME)) {
@@ -114,9 +114,11 @@ export class QrCodeComponent implements OnInit, OnDestroy {
   					takeUntil(this.stopPlay$),
   					map((data) => data as PresentationsResponse),
   					switchMap((res: PresentationsResponse) => {
-  						const format = res?.presentation_submission?.descriptor_map[0]?.format;
+  						const credentials: Observable<KeyValue<string, string>[]>[] = res.credentials ? [...res.credentials.map((it) => {
+  							return this.credentialDecodeService.decode(it.format, it.credential);
+  						})] : [];
   						return forkJoin({
-  							vpToken: res.vp_token ? this.vpTokenDecodeService.decodeVpToken(format, res.vp_token) : of([]),
+  							credentials: forkJoin(credentials),
   							idToken: res.id_token ? this.jWTService.decode(res.id_token) : of([]),
   						}).pipe(
   							take(1)

@@ -19,7 +19,8 @@ export class CborDecodeService {
 			preferWeb: true
 		}))
 			.pipe(
-				map((valueOut: any) => valueOut.documents[0].issuerSigned.nameSpaces['eu.europa.ec.eudiw.pid.1'] ),
+				// eslint-disable-next-line max-len
+				map((valueOut: any) => valueOut.documents[0].issuerSigned.nameSpaces['eu.europa.ec.eudi.pid.1'] ?? valueOut.documents[0].issuerSigned.nameSpaces['org.iso.18013.5.1'] ),
 				map((dataArray: TagValue[]) => {
 					const requestData: any[] = [];
 					dataArray.forEach((item: TagValue) => {

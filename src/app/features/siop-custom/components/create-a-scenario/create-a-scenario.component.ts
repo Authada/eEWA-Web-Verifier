@@ -101,6 +101,16 @@ export class CreateAScenarioComponent implements OnInit {
 	}
 
 	setFields () {
+		this.fields = DATAFields.filter(value => {
+			if(this._format == 'vc+sd-jwt' && value.jsonValue != undefined) {
+				return true;
+			} else if(this._format == 'mso_mdoc' && value.cborValue != undefined) {
+				return true;
+			} else {
+				return false;
+			}
+		});
+		// @ts-expect-error Filter value
 		this.definition.presentation_definition.input_descriptors[0].constraints.fields = this.definitionFields.map((field) => {
 			switch (this._format) {
 			case 'vc+sd-jwt':
@@ -108,7 +118,7 @@ export class CreateAScenarioComponent implements OnInit {
 			case 'mso_mdoc':
 				return field.cborValue;
 			}
-		});
+		}).filter(value => { return value != undefined; });
 	}
 
 	get format () {

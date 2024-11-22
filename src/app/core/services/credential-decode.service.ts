@@ -5,7 +5,7 @@ import {CborDecodeService} from '@core/services/cbor/cbor-decode.service';
 import {Injectable} from '@angular/core';
 
 @Injectable()
-export class VpTokenDecodeService{
+export class CredentialDecodeService {
 	private readonly cborDecodeService: CborDecodeService = new CborDecodeService();
 
 	private mapValue (key: string, value?: any) {
@@ -36,7 +36,7 @@ export class VpTokenDecodeService{
 			hasher: this.digest
 		});
 
-	decodeVpToken (format: string, token: string) {
+	decode (format: string, token: string) {
 		switch (format) {
 		case 'mso_mdoc': {
 			return this.cborDecodeService.decode(token);

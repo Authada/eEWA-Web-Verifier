@@ -1,7 +1,59 @@
 @use '/src/template' as temp;
 
 :host {
-    .container {
-        max-width: temp.$max-body-panel;
-    }
+  .container {
+    max-width: temp.$max-body-panel;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+  }
+
+  ::ng-deep .vc-button {
+    margin-left: 0 !important;
+  }
+
+  .button-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    min-height: 180px;
+  }
+
+  vc-input-scheme {
+    display: block;
+  }
+
+  .mat-button-toggle-group {
+    border-radius: 18pt;
+    width: 500px;
+    justify-content: space-evenly;
+  }
+
+  .mat-button-toggle {
+    background-color: #f2f2ff;
+    border-style: none;
+    box-shadow: none;
+    width: 100%;
+  }
+
+  .mat-button-toggle-checked {
+    background-color: #6E23D2;
+    color: white;
+    opacity: 0.9;
+  }
+
+  .mat-mdc-checkbox {
+    --mdc-checkbox-selected-checkmark-color: #fff;
+    --mdc-checkbox-selected-focus-icon-color: #6e23d2;
+    --mdc-checkbox-selected-hover-icon-color: #6e23d2;
+    --mdc-checkbox-selected-icon-color: #6e23d2;
+    --mdc-checkbox-selected-pressed-icon-color: #6e23d2;
+    --mdc-checkbox-unselected-focus-icon-color: #212121;
+    --mdc-checkbox-unselected-hover-icon-color: #212121;
+    --mdc-checkbox-disabled-selected-icon-color: rgba(0, 0, 0, 0.38);
+    --mdc-checkbox-disabled-unselected-icon-color: rgba(0, 0, 0, 0.38);
+    --mdc-checkbox-unselected-icon-color: rgba(0, 0, 0, 0.54);
+    --mdc-checkbox-unselected-pressed-icon-color: rgba(0, 0, 0, 0.54);
+  }
 }

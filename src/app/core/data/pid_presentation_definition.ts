@@ -7,7 +7,7 @@ export const PID_PRESENTATION_DEFINITION: Presentation = {
 		'id': '32f54163-7166-48f1-93d8-ff217bdb0653',
 		'input_descriptors': [
 			{
-				'id': 'eu.europa.ec.eudiw.pid.1',
+				'id': 'eu.europa.ec.eudi.pid.1',
 				'name': 'EUDI PID',
 				'purpose': 'We need to verify your identity',
 				'format': {
@@ -28,175 +28,175 @@ export const PID_PRESENTATION_DEFINITION: Presentation = {
 					'fields': [
 						{
 							'path': [
-								"$['eu.europa.ec.eudiw.pid.1']['family_name']"
+								"$['eu.europa.ec.eudi.pid.1']['family_name']"
 							],
 							'intent_to_retain': false
 						},
 						{
 							'path': [
-								"$['eu.europa.ec.eudiw.pid.1']['given_name']"
+								"$['eu.europa.ec.eudi.pid.1']['given_name']"
 							],
 							'intent_to_retain': false
 						},
 						{
 							'path': [
-								"$['eu.europa.ec.eudiw.pid.1']['birth_date']"
+								"$['eu.europa.ec.eudi.pid.1']['birth_date']"
 							],
 							'intent_to_retain': false
 						},
 					  {
 							'path': [
-								"$['eu.europa.ec.eudiw.pid.1']['age_over_18']"
+								"$['eu.europa.ec.eudi.pid.1']['age_over_18']"
 							],
 							'intent_to_retain': false
 						},
 					  {
 							'path': [
-								"$['eu.europa.ec.eudiw.pid.1']['age_in_years']"
+								"$['eu.europa.ec.eudi.pid.1']['age_in_years']"
 							],
 							'intent_to_retain': false
 						},
 					  {
 							'path': [
-								"$['eu.europa.ec.eudiw.pid.1']['age_birth_year']"
+								"$['eu.europa.ec.eudi.pid.1']['age_birth_year']"
 							],
 							'intent_to_retain': false
 						},
 					  {
 							'path': [
-								"$['eu.europa.ec.eudiw.pid.1']['family_name_birth']"
+								"$['eu.europa.ec.eudi.pid.1']['family_name_birth']"
 							],
 							'intent_to_retain': false
 						},
 					  {
 							'path': [
-								"$['eu.europa.ec.eudiw.pid.1']['given_name_birth']"
+								"$['eu.europa.ec.eudi.pid.1']['given_name_birth']"
 							],
 							'intent_to_retain': false
 						},
 					  {
 							'path': [
-								"$['eu.europa.ec.eudiw.pid.1']['birth_place']"
+								"$['eu.europa.ec.eudi.pid.1']['birth_place']"
 							],
 							'intent_to_retain': false
 						},
 					  {
 							'path': [
-								"$['eu.europa.ec.eudiw.pid.1']['birth_country']"
+								"$['eu.europa.ec.eudi.pid.1']['birth_country']"
 							],
 							'intent_to_retain': false
 						},
 					  {
 							'path': [
-								"$['eu.europa.ec.eudiw.pid.1']['birth_state']"
+								"$['eu.europa.ec.eudi.pid.1']['birth_state']"
 							],
 							'intent_to_retain': false
 						},
 					  {
 							'path': [
-								"$['eu.europa.ec.eudiw.pid.1']['birth_city']"
+								"$['eu.europa.ec.eudi.pid.1']['birth_city']"
 							],
 							'intent_to_retain': false
 						},
 					  {
 							'path': [
-								"$['eu.europa.ec.eudiw.pid.1']['resident_address']"
+								"$['eu.europa.ec.eudi.pid.1']['resident_address']"
 							],
 							'intent_to_retain': false
 						},
 					  {
 							'path': [
-								"$['eu.europa.ec.eudiw.pid.1']['resident_country']"
+								"$['eu.europa.ec.eudi.pid.1']['resident_country']"
 							],
 							'intent_to_retain': false
 						},
 					  {
 							'path': [
-								"$['eu.europa.ec.eudiw.pid.1']['resident_state']"
+								"$['eu.europa.ec.eudi.pid.1']['resident_state']"
 							],
 							'intent_to_retain': false
 						},
 					  {
 							'path': [
-								"$['eu.europa.ec.eudiw.pid.1']['resident_city']"
+								"$['eu.europa.ec.eudi.pid.1']['resident_city']"
 							],
 							'intent_to_retain': false
 						},
 					  {
 							'path': [
-								"$['eu.europa.ec.eudiw.pid.1']['resident_postal_code']"
+								"$['eu.europa.ec.eudi.pid.1']['resident_postal_code']"
 							],
 							'intent_to_retain': false
 						},
 					  {
 							'path': [
-								"$['eu.europa.ec.eudiw.pid.1']['resident_street']"
+								"$['eu.europa.ec.eudi.pid.1']['resident_street']"
 							],
 							'intent_to_retain': false
 						},
 					  {
 							'path': [
-								"$['eu.europa.ec.eudiw.pid.1']['resident_house_number']"
+								"$['eu.europa.ec.eudi.pid.1']['resident_house_number']"
 							],
 							'intent_to_retain': false
 						},
 					  {
 							'path': [
-								"$['eu.europa.ec.eudiw.pid.1']['gender']"
+								"$['eu.europa.ec.eudi.pid.1']['gender']"
 							],
 							'intent_to_retain': false
 						},
 					  {
 							'path': [
-								"$['eu.europa.ec.eudiw.pid.1']['nationality']"
+								"$['eu.europa.ec.eudi.pid.1']['nationality']"
 							],
 							'intent_to_retain': false
 						},
 					  {
 							'path': [
-								"$['eu.europa.ec.eudiw.pid.1']['issuance_date']"
+								"$['eu.europa.ec.eudi.pid.1']['issuance_date']"
 							],
 							'intent_to_retain': false
 						},
 					  {
 							'path': [
-								"$['eu.europa.ec.eudiw.pid.1']['expiry_date']"
+								"$['eu.europa.ec.eudi.pid.1']['expiry_date']"
 							],
 							'intent_to_retain': false
 						},
 					  {
 							'path': [
-								"$['eu.europa.ec.eudiw.pid.1']['issuing_authority']"
+								"$['eu.europa.ec.eudi.pid.1']['issuing_authority']"
 							],
 							'intent_to_retain': false
 						},
 					  {
 							'path': [
-								"$['eu.europa.ec.eudiw.pid.1']['document_number']"
+								"$['eu.europa.ec.eudi.pid.1']['document_number']"
 							],
 							'intent_to_retain': false
 						},
 					  {
 							'path': [
-								"$['eu.europa.ec.eudiw.pid.1']['administrative_number']"
+								"$['eu.europa.ec.eudi.pid.1']['administrative_number']"
 							],
 							'intent_to_retain': false
 						},
 					  {
 							'path': [
-								"$['eu.europa.ec.eudiw.pid.1']['issuing_country']"
+								"$['eu.europa.ec.eudi.pid.1']['issuing_country']"
 							],
 							'intent_to_retain': false
 						},
 					  {
 							'path': [
-								"$['eu.europa.ec.eudiw.pid.1']['issuing_jurisdiction']"
+								"$['eu.europa.ec.eudi.pid.1']['issuing_jurisdiction']"
 							],
 							'intent_to_retain': false
 						},
 						{
 							'path': [
-								"$['eu.europa.ec.eudiw.pid.1']['source_document_type']"
+								"$['eu.europa.ec.eudi.pid.1']['source_document_type']"
 							],
 							'intent_to_retain': false
 						}
@@ -215,7 +215,7 @@ export const PID_PRESENTATION_DEFINITION_SDJWT: Presentation = {
 		'id': '32f54163-7166-48f1-93d8-ff217bdb0653',
 		'input_descriptors': [
 			{
-				'id': 'eu.europa.ec.eudiw.pid.1',
+				'id': 'eu.europa.ec.eudi.pid.1',
 				'name': 'EUDI PID',
 				'purpose': 'We need to verify your identity',
 				'format': {
@@ -245,6 +245,20 @@ export const PID_PRESENTATION_DEFINITION_SDJWT: Presentation = {
 				'constraints': {
 					'fields': [
 						{
+							"path": [
+								"$.vct"
+							],
+							"filter": {
+								"type": "string",
+								"enum": [
+									"https://metadata-8c062a.usercontent.opencode.de/pid.json",
+									"https://example.bmi.bund.de/credential/pid/1.0",
+									"urn:eu.europa.ec.eudi:pid:1"
+								]
+							},
+							intent_to_retain: true
+						},
+						{
 							'path': [
 								"$.family_name"
 							],
@@ -258,13 +272,13 @@ export const PID_PRESENTATION_DEFINITION_SDJWT: Presentation = {
 						},
 						{
 							'path': [
-								"$.birth_date"
+								"$.birthdate"
 							],
 							'intent_to_retain': false
 						},
 						{
 							'path': [
-								"$.age_over_18"
+								"$.age_equal_or_over.18"
 							],
 							'intent_to_retain': false
 						},
@@ -282,103 +296,25 @@ export const PID_PRESENTATION_DEFINITION_SDJWT: Presentation = {
 						},
 						{
 							'path': [
-								"$.family_name_birth"
+								"$.birth_family_name"
 							],
 							'intent_to_retain': false
 						},
 						{
 							'path': [
-								"$.given_name_birth"
+								"$.place_of_birth"
 							],
 							'intent_to_retain': false
 						},
 						{
 							'path': [
-								"$.birth_place"
+								"$.address"
 							],
 							'intent_to_retain': false
 						},
 						{
 							'path': [
-								"$.birth_country"
-							],
-							'intent_to_retain': false
-						},
-						{
-							'path': [
-								"$.birth_state"
-							],
-							'intent_to_retain': false
-						},
-						{
-							'path': [
-								"$.birth_city"
-							],
-							'intent_to_retain': false
-						},
-						{
-							'path': [
-								"$.resident_address"
-							],
-							'intent_to_retain': false
-						},
-						{
-							'path': [
-								"$.resident_country"
-							],
-							'intent_to_retain': false
-						},
-						{
-							'path': [
-								"$.resident_state"
-							],
-							'intent_to_retain': false
-						},
-						{
-							'path': [
-								"$.resident_city"
-							],
-							'intent_to_retain': false
-						},
-						{
-							'path': [
-								"$.resident_postal_code"
-							],
-							'intent_to_retain': false
-						},
-						{
-							'path': [
-								"$.resident_street"
-							],
-							'intent_to_retain': false
-						},
-						{
-							'path': [
-								"$.resident_house_number"
-							],
-							'intent_to_retain': false
-						},
-						{
-							'path': [
-								"$.gender"
-							],
-							'intent_to_retain': false
-						},
-						{
-							'path': [
-								"$.nationality"
-							],
-							'intent_to_retain': false
-						},
-						{
-							'path': [
-								"$.issuance_date"
-							],
-							'intent_to_retain': false
-						},
-						{
-							'path': [
-								"$.expiry_date"
+								"$.nationalities"
 							],
 							'intent_to_retain': false
 						},
@@ -390,31 +326,19 @@ export const PID_PRESENTATION_DEFINITION_SDJWT: Presentation = {
 						},
 						{
 							'path': [
-								"$.document_number"
-							],
-							'intent_to_retain': false
-						},
-						{
-							'path': [
-								"$.administrative_number"
-							],
-							'intent_to_retain': false
-						},
-						{
-							'path': [
 								"$.issuing_country"
 							],
 							'intent_to_retain': false
 						},
 						{
 							'path': [
-								"$.issuing_jurisdiction"
+								"$.source_document_type"
 							],
 							'intent_to_retain': false
 						},
 						{
 							'path': [
-								"$.source_document_type"
+								"$.also_known_as"
 							],
 							'intent_to_retain': false
 						}
@@ -433,7 +357,7 @@ export const PID_PRESENTATION_DEFINITION_AUTHCHAN: Presentation = {
 		'id': '32f54163-7166-48f1-93d8-ff217bdb0653',
 		'input_descriptors': [
 			{
-				'id': 'eu.europa.ec.eudiw.pid.1',
+				'id': 'eu.europa.ec.eudi.pid.1',
 				'name': 'EUDI PID',
 				'purpose': 'We need to verify your identity',
 				'format': {
@@ -447,175 +371,175 @@ export const PID_PRESENTATION_DEFINITION_AUTHCHAN: Presentation = {
 					'fields': [
 						{
 							'path': [
-								"$['eu.europa.ec.eudiw.pid.1']['family_name']"
+								"$['eu.europa.ec.eudi.pid.1']['family_name']"
 							],
 							'intent_to_retain': false
 						},
 						{
 							'path': [
-								"$['eu.europa.ec.eudiw.pid.1']['given_name']"
+								"$['eu.europa.ec.eudi.pid.1']['given_name']"
 							],
 							'intent_to_retain': false
 						},
 						{
 							'path': [
-								"$['eu.europa.ec.eudiw.pid.1']['birth_date']"
+								"$['eu.europa.ec.eudi.pid.1']['birth_date']"
 							],
 							'intent_to_retain': false
 						},
 						{
 							'path': [
-								"$['eu.europa.ec.eudiw.pid.1']['age_over_18']"
+								"$['eu.europa.ec.eudi.pid.1']['age_over_18']"
 							],
 							'intent_to_retain': false
 						},
 						{
 							'path': [
-								"$['eu.europa.ec.eudiw.pid.1']['age_in_years']"
+								"$['eu.europa.ec.eudi.pid.1']['age_in_years']"
 							],
 							'intent_to_retain': false
 						},
 						{
 							'path': [
-								"$['eu.europa.ec.eudiw.pid.1']['age_birth_year']"
+								"$['eu.europa.ec.eudi.pid.1']['age_birth_year']"
 							],
 							'intent_to_retain': false
 						},
 						{
 							'path': [
-								"$['eu.europa.ec.eudiw.pid.1']['family_name_birth']"
+								"$['eu.europa.ec.eudi.pid.1']['family_name_birth']"
 							],
 							'intent_to_retain': false
 						},
 						{
 							'path': [
-								"$['eu.europa.ec.eudiw.pid.1']['given_name_birth']"
+  							"$['eu.europa.ec.eudi.pid.1']['given_name_birth']"
 							],
 							'intent_to_retain': false
 						},
 						{
 							'path': [
-								"$['eu.europa.ec.eudiw.pid.1']['birth_place']"
+								"$['eu.europa.ec.eudi.pid.1']['birth_place']"
 							],
 							'intent_to_retain': false
 						},
 						{
 							'path': [
-								"$['eu.europa.ec.eudiw.pid.1']['birth_country']"
+								"$['eu.europa.ec.eudi.pid.1']['birth_country']"
 							],
 							'intent_to_retain': false
 						},
 						{
 							'path': [
-								"$['eu.europa.ec.eudiw.pid.1']['birth_state']"
+								"$['eu.europa.ec.eudi.pid.1']['birth_state']"
 							],
 							'intent_to_retain': false
 						},
 						{
 							'path': [
-								"$['eu.europa.ec.eudiw.pid.1']['birth_city']"
+								"$['eu.europa.ec.eudi.pid.1']['birth_city']"
 							],
 							'intent_to_retain': false
 						},
 						{
 							'path': [
-								"$['eu.europa.ec.eudiw.pid.1']['resident_address']"
+								"$['eu.europa.ec.eudi.pid.1']['resident_address']"
 							],
 							'intent_to_retain': false
 						},
 						{
 							'path': [
-								"$['eu.europa.ec.eudiw.pid.1']['resident_country']"
+								"$['eu.europa.ec.eudi.pid.1']['resident_country']"
 							],
 							'intent_to_retain': false
 						},
 						{
 							'path': [
-								"$['eu.europa.ec.eudiw.pid.1']['resident_state']"
+								"$['eu.europa.ec.eudi.pid.1']['resident_state']"
 							],
 							'intent_to_retain': false
 						},
 						{
 							'path': [
-								"$['eu.europa.ec.eudiw.pid.1']['resident_city']"
+								"$['eu.europa.ec.eudi.pid.1']['resident_city']"
 							],
 							'intent_to_retain': false
 						},
 						{
 							'path': [
-								"$['eu.europa.ec.eudiw.pid.1']['resident_postal_code']"
+								"$['eu.europa.ec.eudi.pid.1']['resident_postal_code']"
 							],
 							'intent_to_retain': false
 						},
 						{
 							'path': [
-								"$['eu.europa.ec.eudiw.pid.1']['resident_street']"
+								"$['eu.europa.ec.eudi.pid.1']['resident_street']"
 							],
 							'intent_to_retain': false
 						},
 						{
 							'path': [
-								"$['eu.europa.ec.eudiw.pid.1']['resident_house_number']"
+								"$['eu.europa.ec.eudi.pid.1']['resident_house_number']"
 							],
 							'intent_to_retain': false
 						},
 						{
 							'path': [
-								"$['eu.europa.ec.eudiw.pid.1']['gender']"
+								"$['eu.europa.ec.eudi.pid.1']['gender']"
 							],
 							'intent_to_retain': false
 						},
 						{
 							'path': [
-								"$['eu.europa.ec.eudiw.pid.1']['nationality']"
+								"$['eu.europa.ec.eudi.pid.1']['nationality']"
 							],
 							'intent_to_retain': false
 						},
 						{
 							'path': [
-								"$['eu.europa.ec.eudiw.pid.1']['issuance_date']"
+								"$['eu.europa.ec.eudi.pid.1']['issuance_date']"
 							],
 							'intent_to_retain': false
 						},
 						{
 							'path': [
-								"$['eu.europa.ec.eudiw.pid.1']['expiry_date']"
+								"$['eu.europa.ec.eudi.pid.1']['expiry_date']"
 							],
 							'intent_to_retain': false
 						},
 						{
 							'path': [
-								"$['eu.europa.ec.eudiw.pid.1']['issuing_authority']"
+								"$['eu.europa.ec.eudi.pid.1']['issuing_authority']"
 							],
 							'intent_to_retain': false
 						},
 						{
 							'path': [
-								"$['eu.europa.ec.eudiw.pid.1']['document_number']"
+								"$['eu.europa.ec.eudi.pid.1']['document_number']"
 							],
 							'intent_to_retain': false
 						},
 						{
 							'path': [
-								"$['eu.europa.ec.eudiw.pid.1']['administrative_number']"
+								"$['eu.europa.ec.eudi.pid.1']['administrative_number']"
 							],
 							'intent_to_retain': false
 						},
 						{
 							'path': [
-								"$['eu.europa.ec.eudiw.pid.1']['issuing_country']"
+								"$['eu.europa.ec.eudi.pid.1']['issuing_country']"
 							],
 							'intent_to_retain': false
 						},
 						{
 							'path': [
-								"$['eu.europa.ec.eudiw.pid.1']['issuing_jurisdiction']"
+								"$['eu.europa.ec.eudi.pid.1']['issuing_jurisdiction']"
 							],
 							'intent_to_retain': false
 						},
 						{
 							'path': [
-								"$['eu.europa.ec.eudiw.pid.1']['source_document_type']"
+								"$['eu.europa.ec.eudi.pid.1']['source_document_type']"
 							],
 							'intent_to_retain': false
 						}
@@ -634,7 +558,7 @@ export const PID_PRESENTATION_DEFINITION_SDJWT_AUTHCHAN: Presentation = {
 		'id': '32f54163-7166-48f1-93d8-ff217bdb0653',
 		'input_descriptors': [
 			{
-				'id': 'eu.europa.ec.eudiw.pid.1',
+				'id': 'eu.europa.ec.eudi.pid.1',
 				'name': 'EUDI PID',
 				'purpose': 'We need to verify your identity',
 				'format': {
@@ -657,6 +581,20 @@ export const PID_PRESENTATION_DEFINITION_SDJWT_AUTHCHAN: Presentation = {
 				'constraints': {
 					'fields': [
 						{
+							"path": [
+								"$.vct"
+							],
+							"filter": {
+								"type": "string",
+								"enum": [
+									"https://metadata-8c062a.usercontent.opencode.de/pid.json",
+									"https://example.bmi.bund.de/credential/pid/1.0",
+									"urn:eu.europa.ec.eudi:pid:1"
+								]
+							},
+							intent_to_retain: true
+						},
+						{
 							'path': [
 								"$.family_name"
 							],
@@ -670,13 +608,13 @@ export const PID_PRESENTATION_DEFINITION_SDJWT_AUTHCHAN: Presentation = {
 						},
 						{
 							'path': [
-								"$.birth_date"
+								"$.birthdate"
 							],
 							'intent_to_retain': false
 						},
 						{
 							'path': [
-								"$.age_over_18"
+								"$.age_equal_or_over.18"
 							],
 							'intent_to_retain': false
 						},
@@ -694,103 +632,25 @@ export const PID_PRESENTATION_DEFINITION_SDJWT_AUTHCHAN: Presentation = {
 						},
 						{
 							'path': [
-								"$.family_name_birth"
+								"$.birth_family_name"
 							],
 							'intent_to_retain': false
 						},
 						{
 							'path': [
-								"$.given_name_birth"
+								"$.place_of_birth"
 							],
 							'intent_to_retain': false
 						},
 						{
 							'path': [
-								"$.birth_place"
+								"$.address"
 							],
 							'intent_to_retain': false
 						},
 						{
 							'path': [
-								"$.birth_country"
-							],
-							'intent_to_retain': false
-						},
-						{
-							'path': [
-								"$.birth_state"
-							],
-							'intent_to_retain': false
-						},
-						{
-							'path': [
-								"$.birth_city"
-							],
-							'intent_to_retain': false
-						},
-						{
-							'path': [
-								"$.resident_address"
-							],
-							'intent_to_retain': false
-						},
-						{
-							'path': [
-								"$.resident_country"
-							],
-							'intent_to_retain': false
-						},
-						{
-							'path': [
-								"$.resident_state"
-							],
-							'intent_to_retain': false
-						},
-						{
-							'path': [
-								"$.resident_city"
-							],
-							'intent_to_retain': false
-						},
-						{
-							'path': [
-								"$.resident_postal_code"
-							],
-							'intent_to_retain': false
-						},
-						{
-							'path': [
-								"$.resident_street"
-							],
-							'intent_to_retain': false
-						},
-						{
-							'path': [
-								"$.resident_house_number"
-							],
-							'intent_to_retain': false
-						},
-						{
-							'path': [
-								"$.gender"
-							],
-							'intent_to_retain': false
-						},
-						{
-							'path': [
-								"$.nationality"
-							],
-							'intent_to_retain': false
-						},
-						{
-							'path': [
-								"$.issuance_date"
-							],
-							'intent_to_retain': false
-						},
-						{
-							'path': [
-								"$.expiry_date"
+								"$.nationalities"
 							],
 							'intent_to_retain': false
 						},
@@ -802,31 +662,19 @@ export const PID_PRESENTATION_DEFINITION_SDJWT_AUTHCHAN: Presentation = {
 						},
 						{
 							'path': [
-								"$.document_number"
-							],
-							'intent_to_retain': false
-						},
-						{
-							'path': [
-								"$.administrative_number"
-							],
-							'intent_to_retain': false
-						},
-						{
-							'path': [
 								"$.issuing_country"
 							],
 							'intent_to_retain': false
 						},
 						{
 							'path': [
-								"$.issuing_jurisdiction"
+								"$.source_document_type"
 							],
 							'intent_to_retain': false
 						},
 						{
 							'path': [
-								"$.source_document_type"
+								"$.also_known_as"
 							],
 							'intent_to_retain': false
 						}
