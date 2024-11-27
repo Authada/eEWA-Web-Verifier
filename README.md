@@ -4,6 +4,9 @@ Based on EU reference implementation commit ed805682160035060cdcd2f7e1cb3f4ab960
 
 See https://github.com/eu-digital-identity-wallet/eudi-web-verifier/commit/ed805682160035060cdcd2f7e1cb3f4ab9603bab
 
+# Added for conformance test
+- Remove pattern matching for allowing broader "schemes"
+
 # Changes made in phase 2:
 - Change default wallet client scheme
 - Adapt to new sd-jwt vc dm model of german pid fields

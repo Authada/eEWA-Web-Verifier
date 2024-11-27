@@ -1,24 +1,23 @@
 import {
-	ChangeDetectionStrategy,
-	ChangeDetectorRef,
-	Component,
-	ElementRef,
-	Injector,
-	OnDestroy,
-	OnInit,
-	ViewChild
+  ChangeDetectionStrategy,
+  ChangeDetectorRef,
+  Component,
+  ElementRef,
+  Injector,
+  OnDestroy,
+  OnInit,
+  ViewChild
 } from '@angular/core';
 import {CommonModule, KeyValue} from '@angular/common';
 import {SharedModule} from '@app/shared/shared.module';
 import {DataService} from '@app/core/services/data.service';
 import {PresentationDefinitionService} from '@app/core/services/presentation-definition.service';
-import {forkJoin, from, interval, Observable, of, ReplaySubject, Subject, take, takeUntil} from 'rxjs';
+import {forkJoin, interval, Observable, of, ReplaySubject, Subject, take, takeUntil} from 'rxjs';
 import {map, switchMap} from 'rxjs/operators';
 import {NavigateService} from '@app/core/services/navigate.service';
 import {PresentationDefinitionResponse} from '@app/core/models/presentation-definition-response';
 import {TransformedResponse} from '../../models/TransformedResponse';
 import {JWTService} from '@app/core/services/jwt.service';
-import {environment} from '@environments/environment';
 import {PresentationsResultsComponent} from '../presentations-results/presentations-results.component';
 import {DeviceDetectorService} from '@app/core/services/device-detector.service';
 import {LocalStorageService} from '@app/core/services/local-storage.service';
@@ -149,9 +148,7 @@ export class QrCodeComponent implements OnInit, OnDestroy {
   	}
   }
   private buildQrCode (data: {client_id: string, request_uri: string, presentation_id: string}): string {
-  	let builtURL = `${environment.apiUrl}?client_id=${data.client_id}&request_uri=${encodeURIComponent(data.request_uri)}`;
-  	builtURL = builtURL.replace('https://', this.scheme);
-  	return builtURL;
+    return `${this.scheme}?client_id=${data.client_id}&request_uri=${encodeURIComponent(data.request_uri)}`;
   }
 
   goToLink (url: string) {
